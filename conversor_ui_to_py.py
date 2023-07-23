@@ -57,7 +57,7 @@ class UiConversor(QtWidgets.QMainWindow, Ui_MainWindow):
         self.txt_direccion.setText("")
         file_dialog = QFileDialog()
         file_path = file_dialog.getOpenFileName(self, "Abrir archivo", filter="*.ui")
-        print(len(file_path[0]))
+        # print(len(file_path[0]))
         if len(file_path[0]):
             try:
                 directorios = file_path[0].split("/")
@@ -65,8 +65,8 @@ class UiConversor(QtWidgets.QMainWindow, Ui_MainWindow):
                 directorios.pop()
                 self.nombre_archivo = self.archivo[0]
                 self.ruta = "/".join(directorios) + "/"
-                print(self.ruta)
-                print(self.nombre_archivo)
+                # print(self.ruta)
+                # print(self.nombre_archivo)
                 self.txt_direccion.setText(file_path[0])
                 self.bt_convertir.setEnabled(True)
 
@@ -74,13 +74,13 @@ class UiConversor(QtWidgets.QMainWindow, Ui_MainWindow):
                 print(error)
 
     def convertir_archivo(self):
-        print(len(self.ruta))
+        # print(len(self.ruta))
         if len(self.ruta):
             aplicacion = 'pyuic5 "' + self.ruta + self.nombre_archivo + '.ui" -o "' \
                          + self.ruta + 'ui_' + self.nombre_archivo + '.py"'
             try:
                 process = QProcess(self)
-                print(aplicacion)
+                # print(aplicacion)
                 process.startDetached(aplicacion)
                 self.bt_convertir.setEnabled(False)
                 self.lbl_mensaje.setHidden(False)

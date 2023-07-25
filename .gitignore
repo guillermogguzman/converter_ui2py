@@ -1,5 +1,8 @@
+__pycache__/
 build/
 dist/
+venv/
+.idea/
 setup.py
 ssh_key
 ssh_key.pub

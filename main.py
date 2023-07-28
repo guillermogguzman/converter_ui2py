@@ -3,7 +3,7 @@
 # Nombre:       Conversor_ui_to_py
 # Autor:        Ing. Guillermo G. Guzmán
 # Creado:       26 de Junio 2023
-# Modificado:   26 de Junio 2023
+# Modificado:   27 de Julio 2023
 # Copyright:    (c) 2023 by Ing. Guillermo G. Guzmán, 2023
 # License:      a definir
 # ----------------------------------------------------------------------------
